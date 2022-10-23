@@ -26,6 +26,10 @@
   },
   "homepage": "https://github.com/danielbayerlein/dashboard#readme",
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.10",
     "babel-plugin-styled-components": "^1.13.3",
     "dotenv-webpack": "^2.0.0",
     "isomorphic-unfetch": "^3.1.0",
