@@ -22,7 +22,6 @@ export default () => (
     <DateTime />
 
     <PageSpeedInsightsScore url='https://github.com' />
-
     <PageSpeedInsightsStats url='https://github.com' />
 
     <JiraIssueCount
