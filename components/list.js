@@ -1,0 +1,44 @@
+import Head from 'next/head'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { normalize } from 'polished'
+
+import Topbar from './layout/topbar'
+
+const GlobalStyle = createGlobalStyle`
+  ${normalize()}
+
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+`
+
+const Container = styled.main`
+  align-content: center;
+  align-items: flex-start;
+  background-color: ${props => props.theme.palette.backgroundColor};
+  color: ${props => props.theme.palette.textColor};
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: .25rem;
+`
+
+export default ({ children, theme, title = 'Dashboard' }) => (
+  <ThemeProvider theme={theme}>
+    <Container>
+      <Head>
+        <title>{title}</title>
+        <link rel='icon' href='/static/favicon.png' />
+        <link
+          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'
+          rel='stylesheet'
+        />
+      </Head>
+      <Topbar />
+      {children}
+
+      <GlobalStyle />
+    </Container>
+  </ThemeProvider>
+)

@@ -13,6 +13,8 @@ const Container = styled.div`
   justify-content: center;
   margin: 1em;
   padding: 1em;
+  max-height: 100%;
+  overflow-y: auto;
 `
 
 const Title = styled.h1`
